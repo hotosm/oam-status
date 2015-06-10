@@ -1,0 +1,13 @@
+language: node_js
+
+node_js:
+- '0.12'
+
+deploy:
+  provider: heroku
+  api_key:
+    secure: kibCvkj+3rE2XCgCZeMGPBoSioIOb5rJqByACnPB2Nc3qNVmeFDWEbBtKe+MMm55rkqYP29BzehMO1xL0qBV76Luepnp9wbvl3Qb7d+Uj7d9TO9KrNuTYRmKDuqHk+N7POczvP9Fc5krcg+CSj87iMUGVxLRuahVLV/KpptaH/ozAI2XMGD/ScgNLce6b5qO6EvJ05OhysJ1nUjvFjHTsQPD5ajjxSV4hVp4VKiAwV+D8RDdSuWRJevwQtZtYiMuESRpYqtzixE9idgq+0NHMAEt8s6K/+x0ppORRQNdk91FqlsI391bQ+vvpbTUFKaLq1lAw1PHwXKutkteO6zP4uXNKBJC/uYn94g/0KCGiSOGItqAGOncBntWahpePdHA5+VFwTJ4YB/O1Evk2hmijU+2st1+0N906yQhN6Uazy8NgvcmRwq4r1hKdfFPGH2L8IBkDta4z9NlfCbTGC55kRGWHriKuGv9N5FoO5E9b1qcpxr3jJW3rWl1S4cuQ8gLsygooTZxD+a1G48rMgo3hZxyD+nlS6pjUlnbvhBKjT8iiKQC+1BINJCrbjsTsnK1f5tXsrFIwmWrYELYZF/+6NkSUXTOCx3KYlhowgQGgxAV2mwVWQyJzgnSjsqCc0FM/lEJRTRSMNRmTKrtYCjD5oQ/p9JTYpnIcc7XJBykKPQ=
+  app: oam-status
+  on:
+    repo: hotosm/oam-status
+    branch: master
