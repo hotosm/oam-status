@@ -1,0 +1,19 @@
+.red {
+    color: red;
+}
+
+.yellow {
+    color: yellow;
+}
+
+.green {
+    color: green;
+}
+
+.unknown {
+    color: gray;
+}
+
+.stats {
+    display: none;
+}

@@ -1,0 +1,25 @@
+{
+  "name": "oam-status",
+  "version": "0.1.0",
+  "description": "A simple status dashboard for oam-catalog",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hotosm/oam-status.git"
+  },
+  "author": "Development Seed",
+  "license": "CC01",
+  "engines": {
+    "node": "0.12.2"
+  },
+  "dependencies": {
+    "ejs": "^2.3.1",
+    "express": "^4.12.4",
+    "newrelic": "^1.20.0",
+    "request": "^2.57.0"
+  }
+}
