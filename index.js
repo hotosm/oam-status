@@ -50,6 +50,9 @@ app.get('/', function (req, res) {
     res.render('index', context);
   });
 });
+app.get('/ping', function (req, res) {
+  res.send('pong');
+});
 app.listen(port, function () {
   console.info('Web server started on port ' + port + '.\n');
 });
