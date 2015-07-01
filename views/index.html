@@ -1,3 +1,27 @@
+<%
+  var message, klass, favicon;
+  switch(health) {
+    case 'green':
+      message = 'The catalog is up and running.';
+      klass = 'status-up';
+      favicon = 'favicon-up';
+    break;
+    case 'yellow':
+      message = 'The catalog status is meh.';
+      klass = 'status-meh';
+      favicon = 'favicon-meh';
+    break;
+    case 'red':
+      message = 'The catalog is down.';
+      klass = 'status-down';
+      favicon = 'favicon-down';
+    break;
+    default:
+      message = 'The catalog status is unknown.';
+      klass = 'status-unknown';
+      favicon = 'favicon-unknown';
+  }
+%>
 <!DOCTYPE html>
 <html>
   <head>
@@ -8,7 +32,7 @@
 
     <title>OpenAerialMap Catalog Status</title>
 
-    <link rel="shortcut icon" href="assets/graphics/meta/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="assets/graphics/meta/<%= favicon %>.ico" type="image/x-icon" />
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700" />
 
     <link rel="stylesheet" type="text/css" href="assets/styles/normalize.css" />
@@ -21,28 +45,20 @@
         <h1 id="site-title"><img src="assets/graphics/layout/oam-logo-h-pos.svg" width="167" height="32" alt="OpenAerialMap logo" /><span class="visually-hidden">OpenAerialMap</span> <small class="antialiased">Status</small></h1>
       </header>
       <main id="site-body" role="main">
-        <div class="status-info antialiased status-up">
-          <h2>The catalog is up and running.</h2>
-          <p>Updated 2 hours ago</p>
+        <div class="status-info antialiased <%= klass %>">
+          <h2><%= message %></h2>
+          <p data-hook="last-update"><!-- Content from js --></p>
         </div>
-        <div class="content">
+        <div class="content" data-hook="history">
           <h3>History</h3>
           <dl class="stats-list">
-            <dt>829 images</dt>
-            <dd>2 hours ago</dd>
-            <dt>829 images</dt>
-            <dd>2 hours ago</dd>
-            <dt>829 images</dt>
-            <dd>2 hours ago</dd>
-            <dt>829 images</dt>
-            <dd>2 hours ago</dd>
-            <dt>829 images</dt>
-            <dd>2 hours ago</dd>
+            <!-- Content from js -->
           </dl>
         </div>
       </main>
     </div>
 
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.3/moment.min.js"></script>
     <script src="assets/scripts/main.js" type="text/javascript"></script>
   </body>
 </html>
