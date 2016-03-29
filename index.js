@@ -29,9 +29,15 @@ var getNewRelicStatus = function (cb) {
     var data;
     try {
       data = JSON.parse(body);
-      return cb(data.application.health_status);
+      return cb({
+        health: data.application.health_status,
+        lastCheck: data.application.last_reported_at
+      });
     } catch (e) {
-      return cb('unknown');
+      return cb({
+        health: 'unknown',
+        lastCheck: null
+      });
     }
   });
 };
@@ -44,10 +50,15 @@ app.set('view engine', 'html');
 app.engine('.html', require('ejs').renderFile);
 app.get('/', function (req, res) {
   getNewRelicStatus(function (status) {
-    var context = {
-      health: status
-    };
-    res.render('index', context);
+    res.render('index', status);
+  });
+});
+app.get('/healthcheck', function (req, res) {
+  // Enable cors for this endpoint.
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+  getNewRelicStatus(function (status) {
+    res.send(status);
   });
 });
 app.get('/ping', function (req, res) {
