@@ -17,3 +17,6 @@ The following variables will need to be set for the app to properly run.
 You can start the application by running
 
 `npm start`
+
+## License
+Oam Status is licensed under **BSD 3-Clause License**, see the [LICENSE](LICENSE) file for more details.
