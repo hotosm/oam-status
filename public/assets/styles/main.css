@@ -35,12 +35,12 @@ a, a:visited {
 	color: #439ab4;
 }
 
-a:hover {
-  opacity: 0.64;
+a:hover img{
+  opacity: 0.65;
   outline: none;
 }
 
-a:active{
+a:active img{
   outline: none;
   transform: translate(0, 1px);
 }
@@ -60,6 +60,7 @@ a:active{
 }
 
 #site-title img {
+  margin-right: 2px;
   display: block;
 }
 
