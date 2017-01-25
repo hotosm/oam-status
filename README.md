@@ -52,9 +52,28 @@ Configuration for this app is done through environment variables:
 npm start
 ```
 
+### Endpoints
+
+#### `/` (root)
+Renders the status page as html.
+
+#### `/healthcheck`
+Returns the status of the system using a color coding format. Example:
+```
+{
+    "health": "green", // can be `green`, `yellow`, `red` or `unknown`
+    "lastCheck": "2017-01-25T10:53:17+00:00"
+}
+```
+
+#### `/ping`
+Replies with `pong`.
+
+
 # Deployment
 This app can be run on any server with Node.js 4.7
 The deployment instructions are the same as listed above.
 
 ## License
 Oam Status is licensed under **BSD 3-Clause License**, see the [LICENSE](LICENSE) file for more details.
+
