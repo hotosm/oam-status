@@ -50,6 +50,7 @@ app.set('view engine', 'html');
 app.engine('.html', require('ejs').renderFile);
 app.get('/', function (req, res) {
   getNewRelicStatus(function (status) {
+    status.catalogUrl = process.env.CATALOG_URL || 'https://oam-catalog.herokuapp.com';
     res.render('index', status);
   });
 });
