@@ -46,6 +46,11 @@ Configuration for this app is done through environment variables:
 - `CATALOG_URL` - The [OAM catalog](https://github.com/hotosm/oam-catalog) url (no trailing slash) (defaults to `https://oam-catalog.herokuapp.com`)
 - `PORT` - Port on which the app should run (defaults to 3000).
 
+**Newrelic**
+Newrelic is specially important in oam-status because it's used to monitor the status of the catalog.
+The credentials used here need to be the same as the ones for the [OAM Catalog](https://github.com/hotosm/oam-catalog).
+Visit [Newrelic](https://newrelic.com/) if you need to create an account.
+
 #### Starting the app
 
 ```
