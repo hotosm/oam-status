@@ -79,6 +79,19 @@ Replies with `pong`.
 This app can be run on any server with Node.js 4.7
 The deployment instructions are the same as listed above.
 
+# Docker
+Docker allows a quick packaging of the app for production.
+
+Build the docker container by running:
+```
+npm run docker-build
+```
+
+After the build, export the appropriate env variables (see above), and run with:
+```
+npm run docker-run
+```
+
 ## License
 Oam Status is licensed under **BSD 3-Clause License**, see the [LICENSE](LICENSE) file for more details.
 
