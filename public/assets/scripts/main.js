@@ -27,5 +27,5 @@ function reqListener () {
 
 var oReq = new XMLHttpRequest();
 oReq.onload = reqListener;
-oReq.open('get', 'https://oam-catalog.herokuapp.com/analytics?limit=16', true);
+oReq.open('get', OAM.catalogUrl + '/analytics?limit=16', true);
 oReq.send();
