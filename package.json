@@ -5,9 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 0",
-    "start": "node index.js",
-    "docker-build": "docker build -t oam-status .",
-    "docker-run": ".build_scripts/docker/run.sh"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",

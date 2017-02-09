@@ -80,16 +80,21 @@ This app can be run on any server with Node.js 4.7
 The deployment instructions are the same as listed above.
 
 # Docker
-Docker allows a quick packaging of the app for production.
+Docker allows for a quick packaging of the app for production.
 
-Build the docker container by running:
+To setup the environment variables for docker copy `sample.local.env` to `local.env`
+and fill in the values.
+Check the section [Config](#config) on how to configure the variables. Please note that for the docker container the `PORT` has to be changed in the `docker-compose.yml` file. 
+
+
+Run the docker container with:
 ```
-npm run docker-build
+docker-compose up -d
 ```
 
-After the build, export the appropriate env variables (see above), and run with:
+To stop the container run
 ```
-npm run docker-run
+docker-compose stop
 ```
 
 ## License
