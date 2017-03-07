@@ -79,6 +79,24 @@ Replies with `pong`.
 This app can be run on any server with Node.js 4.7
 The deployment instructions are the same as listed above.
 
+# Docker
+Docker allows for a quick packaging of the app for production.
+
+To setup the environment variables for docker copy `sample.local.env` to `local.env`
+and fill in the values.
+Check the section [Config](#config) on how to configure the variables. Please note that for the docker container the `PORT` has to be changed in the `docker-compose.yml` file. 
+
+
+Run the docker container with:
+```
+docker-compose up -d
+```
+
+To stop the container run
+```
+docker-compose stop
+```
+
 ## License
 Oam Status is licensed under **BSD 3-Clause License**, see the [LICENSE](LICENSE) file for more details.
 
