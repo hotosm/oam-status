@@ -1,4 +1,5 @@
 node_modules
 newrelic_agent.log
 npm-debug.log
-local.env
+.travis.yml
+.build_scripts
